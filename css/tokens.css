@@ -1,0 +1,35 @@
+/* tokens.css: barvy, písma, rozestupy. Kontrasty ověřené na WCAG AA. */
+:root {
+  /* barvy */
+  --blue: #045389;          /* primární, z původního webu */
+  --blue-deep: #033E69;
+  --ink: #0A2236;           /* text a tmavé plochy */
+  --paper: #F6F8FA;
+  --white: #FFFFFF;
+  --orange: #F26B1D;        /* jen CTA a aktivní uzly; tmavý text na ní: 5,3:1 */
+  --orange-lite: #FF8A3D;   /* výplň při hoveru; tmavý text: 6,9:1 */
+  --line: #CBD8E4;          /* pasivní potrubí a dělicí linky */
+  --line-strong: #8AA3B8;
+  --muted: #4A5E70;         /* 6,6:1 na bílé */
+  --on-dark: #C9D8E6;
+  --err: #B3261E;
+  --focus: #045389;
+
+  /* písma */
+  --font-head: 'Exo 2', system-ui, sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+
+  /* rozvržení */
+  --wrapmax: 1280px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --rail: 84px;                                   /* levý pruh pro potrubní linku */
+  --bleed: max(var(--gutter), calc((100vw - var(--wrapmax)) / 2));
+  --header-h: 68px;
+  --mbar-h: 68px;
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+@media (max-width: 899px) {
+  :root { --rail: 44px; }
+}
